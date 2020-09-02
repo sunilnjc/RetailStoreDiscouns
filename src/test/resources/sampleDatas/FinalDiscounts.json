@@ -1,0 +1,35 @@
+{
+  "userName": "Arul",
+  "userType": "OTHERS",
+  "totalDiscountedPrice": 6845.17,
+  "itemsPurchased": [
+    {
+      "itemName": "Potato",
+      "quantity": 5,
+      "type": "GROCERY",
+      "price": 1000,
+      "discountedPrice": 1000
+    },
+    {
+      "itemName": "Ipad Pro",
+      "quantity": 1,
+      "type": "HOME",
+      "price": 3500,
+      "discountedPrice": 3325
+    },
+    {
+      "itemName": "Tomatoes",
+      "quantity": 4,
+      "type": "GROCERY",
+      "price": 600,
+      "discountedPrice": 600
+    },
+    {
+      "itemName": "Bose Headphones",
+      "quantity": 2,
+      "type": "HOME",
+      "price": 2400.46,
+      "discountedPrice": 2280.437
+    }
+  ]
+}
