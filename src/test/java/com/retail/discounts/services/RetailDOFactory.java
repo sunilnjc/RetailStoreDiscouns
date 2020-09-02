@@ -56,6 +56,21 @@ public class RetailDOFactory {
 		return userDetails;
 
 	}
+	
+	public List<User> UserListNonRegular() {
+
+		User user = new User();
+		user.setUserId("sunil007");
+		user.setUserName("Anil");
+		user.setType(UserType.AFFILIATED);
+		user.setSinceWhen("2018-08-08");
+
+		List<User> userDetails = new ArrayList<>();
+		userDetails.add(user);
+
+		return null;
+
+	}
 
 	public ItemsList ListOfItems() {
 
@@ -116,6 +131,23 @@ public class RetailDOFactory {
 		finalDiscounts.setUserName("Anil");
 		finalDiscounts.setUserType(UserType.AFFILIATED.toString());
 		finalDiscounts.setTotalDiscountedPrice(64.8);
+		finalDiscounts.setItemsPurchased(itemList);
+
+		return finalDiscounts;
+
+	}
+	
+	public FinalDiscounts finalDiscountsForNonRegularUsers() {
+
+		Items items = new Items("Potato", 5, ProductType.HOME, 14.4, 10.0);
+
+		List<Items> itemList = new ArrayList<>();
+		itemList.add(items);
+
+		FinalDiscounts finalDiscounts = new FinalDiscounts();
+		finalDiscounts.setUserName("Anil");
+		finalDiscounts.setUserType(UserType.AFFILIATED.toString());
+		finalDiscounts.setTotalDiscountedPrice(72.0);
 		finalDiscounts.setItemsPurchased(itemList);
 
 		return finalDiscounts;
