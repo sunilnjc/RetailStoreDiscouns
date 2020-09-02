@@ -86,6 +86,20 @@ public class RetailDOFactory {
 
 	}
 	
+	public ItemsList ListOfItemsHome() {
+
+		Items items = new Items("Bose", 5, ProductType.HOME, 100.4, 95.0);
+
+		List<Items> itemList = new ArrayList<>();
+		itemList.add(items);
+
+		ItemsList listOfItems = new ItemsList();
+		listOfItems.setItems(itemList);
+
+		return listOfItems;
+
+	}
+	
 	public FinalDiscounts finalDiscountsForOthers() {
 
 		Items items = new Items("Potato", 5, ProductType.HOME, 14.4, 10.0);
@@ -120,6 +134,24 @@ public class RetailDOFactory {
 
 	}
 	
+	
+	public FinalDiscounts totalDiscountedPriceForEmployee() {
+
+		Items items = new Items("Potato", 5, ProductType.HOME, 14.4, 10.0);
+
+		List<Items> itemList = new ArrayList<>();
+		itemList.add(items);
+
+		FinalDiscounts finalDiscounts = new FinalDiscounts();
+		finalDiscounts.setUserName("Sunil");
+		finalDiscounts.setUserType(UserType.EMPLOYED.toString());
+		finalDiscounts.setTotalDiscountedPrice(476.9);
+		finalDiscounts.setItemsPurchased(itemList);
+
+		return finalDiscounts;
+
+	}
+	
 	public FinalDiscounts finalDiscountsForAffiliated() {
 
 		Items items = new Items("Potato", 5, ProductType.HOME, 14.4, 10.0);
@@ -140,7 +172,7 @@ public class RetailDOFactory {
 	public List<User> UserListDefaultUsers() {
 
 		User user = new User();
-		user.setUserId("5f4e1b76ead6f06f6a348458");
+		user.setUserId("5f4e1b76ead6f06f6a348457");
 		user.setUserName("Anil");
 		user.setType(UserType.TEST);
 		user.setSinceWhen("2018-08-08");
@@ -162,6 +194,23 @@ public class RetailDOFactory {
 		FinalDiscounts finalDiscounts = new FinalDiscounts();
 		finalDiscounts.setUserName("Anil");
 		finalDiscounts.setUserType(UserType.AFFILIATED.toString());
+		finalDiscounts.setTotalDiscountedPrice(72.0);
+		finalDiscounts.setItemsPurchased(itemList);
+
+		return finalDiscounts;
+
+	}
+	
+	public FinalDiscounts fetchFinalDiscountedPriceForDefaultUsers() {
+
+		Items items = new Items("Potato", 5, ProductType.HOME, 14.4, 10.0);
+
+		List<Items> itemList = new ArrayList<>();
+		itemList.add(items);
+
+		FinalDiscounts finalDiscounts = new FinalDiscounts();
+		finalDiscounts.setUserName("Anil");
+		finalDiscounts.setUserType(UserType.TEST.toString());
 		finalDiscounts.setTotalDiscountedPrice(72.0);
 		finalDiscounts.setItemsPurchased(itemList);
 
