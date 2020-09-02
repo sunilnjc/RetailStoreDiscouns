@@ -4,6 +4,7 @@ public enum UserType {
 
 	EMPLOYED,
 	AFFILIATED,
-	OTHERS;
+	OTHERS,
+	TEST;
 	
 }

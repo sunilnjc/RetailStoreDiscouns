@@ -122,5 +122,24 @@ public class RetailDiscountsImplTest {
 		assertEquals(finalDiscounts.getTotalDiscountedPrice(), finalDiscountsResponse.getTotalDiscountedPrice());
 
 	}
+	
+	@Test
+	public void fetchFinalDiscountedPriceForDefaultUsers() {
+
+		ItemsList listOfItems = doFactory.ListOfItems();
+
+		List<User> listOfUsers = doFactory.UserListDefaultUsers();
+
+		Mockito.when(mongoTemplate.find(Mockito.any(Query.class), Mockito.eq(User.class), Mockito.anyString()))
+				.thenReturn(listOfUsers);
+
+		FinalDiscounts finalDiscountsResponse = retrieveDiscounts.discountedPrice("sunil123",
+				listOfItems);
+			
+		finalDiscounts = doFactory.finalDiscountsForNonRegularUsers();
+
+		assertEquals(finalDiscounts.getTotalDiscountedPrice(), finalDiscountsResponse.getTotalDiscountedPrice());
+
+	}
 
 }

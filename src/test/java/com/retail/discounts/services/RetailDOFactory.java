@@ -137,6 +137,21 @@ public class RetailDOFactory {
 
 	}
 	
+	public List<User> UserListDefaultUsers() {
+
+		User user = new User();
+		user.setUserId("5f4e1b76ead6f06f6a348458");
+		user.setUserName("Anil");
+		user.setType(UserType.TEST);
+		user.setSinceWhen("2018-08-08");
+
+		List<User> userDetails = new ArrayList<>();
+		userDetails.add(user);
+
+		return userDetails;
+
+	}
+	
 	public FinalDiscounts finalDiscountsForNonRegularUsers() {
 
 		Items items = new Items("Potato", 5, ProductType.HOME, 14.4, 10.0);
@@ -153,5 +168,6 @@ public class RetailDOFactory {
 		return finalDiscounts;
 
 	}
+
 
 }

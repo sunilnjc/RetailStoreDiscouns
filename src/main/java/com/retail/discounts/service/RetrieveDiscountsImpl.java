@@ -172,7 +172,7 @@ public class RetrieveDiscountsImpl implements RetrieveDiscounts {
 			break;
 
 		default:
-			calculateDiscountsBasedOnNonRegularUser(item);
+			resultItems = calculateDiscountsBasedOnNonRegularUser(item);
 			break;
 
 		}
