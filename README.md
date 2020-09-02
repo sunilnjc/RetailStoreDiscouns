@@ -138,5 +138,27 @@ as a discount).
           ]
         }'```
         
-        
+ ### Clone your repository to your local machine
+ 1) Clone RetailStoreDiscouns repository from GitHub to your local computer. From this repository page on GitHub, click the green button labeled Clone or download, and in the “Clone with HTTPs” section, copy the URL for your repository.
+ 
+ 2) create a directory in your local machine
+            ```
+            cd Documents
+            ```
+ 3) git clone https://github.com/sunilnjc/RetailStoreDiscouns.git  
+ 
+ 4) cd RetailStoreDiscouns
+ 
+ 5) mvn clean install (Maven should be installed in the system and should be configured in the path variable)
+ 
+ ### Code Coverage
+ 
+ 1) After successfull build go to cd RetailStoreDiscouns/target/site/jacoco
+ 
+ 2) Open index.html file to view the code coverage
+
+ 
+ 
+ 
+ 
  
